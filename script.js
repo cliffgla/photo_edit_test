@@ -6,7 +6,7 @@ function changeBright() {
 
     val = (val+10)/10.0;
 
-    $("#brightness-input").html("<p>"+ value + "</p>");
+    $("#brightness-value").html("<p>"+ value + "</p>");
     $("#photo img").css("filter", "brightness("+ val +")");
 
 
