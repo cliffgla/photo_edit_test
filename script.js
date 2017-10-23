@@ -22,7 +22,7 @@ $("input[value]").change(function() {
     contrastVal = (pVal+10)/10.0;
 
     $("#contrast-value").html("<p>"+ pVal + "</p>");
-$   ("#photo img").css("filter", "brightness("+ brightVal +") contrast("+ contrastVal +") saturate(" + satVal + ")");
+    $("#photo img").css("filter", "brightness("+ brightVal +") contrast("+ contrastVal +") saturate(" + satVal + ")");
 
     satVal = $("#saturation-input").val();
     pVal = parseInt(satVal);
