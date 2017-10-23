@@ -1,30 +1,31 @@
-var value = 0
-function filter() {
-    brightnessValue = $("#brightness-input").val();
-    brightVal = parseInt(brightnessValue);
-    console.log(brightnessValue);
+var brightVal;
 
-    brightVal = (brightVal+10)/10.0;
+var contrastVal;
 
-    $("#brightness-value").html("<p>"+ brightnessValue + "</p>");
-    $("#photo img").css("filter", "brightness("+ brightVal +")");
+var satVal;
 
 
 
-}
-
-function changeContrast() {
-    value = $("#contrast-input").val();
-    val = parseInt(value);
-    console.log(value);
-
-    val = (val+10)/10.0;
-
-    $("#contrast-value").html("<p>"+ value + "</p>");
-    $("#photo img").css("filter", "contrast("+ val +")");
 
 
+$("input[value]").change(function() {
+    brightVal = $("#brightness-input").val();
+    pVal = parseInt(brightVal);
+    console.log(brightVal);
 
-}
-$("input[value]").change(filter);
-$("#contrast-input[value]").change(changeContrast);
+    brightVal = (pVal+10)/10.0;
+
+    $("#brightness-value").html("<p>"+ pVal + "</p>");
+    $("#photo img").css("filter", "brightness("+ brightVal +") contrast("+ contrastVal +")");
+
+    contrastVal = $("#contrast-input").val();
+    pVal = parseInt(contrastVal);
+    console.log(contrastVal);
+
+    contrastVal = (pVal+10)/10.0;
+
+    $("#contrast-value").html("<p>"+ pVal + "</p>");
+    $("#photo img").css("filter", "brightness("+ brightVal +") contrast("+ contrastVal +")");
+
+
+});
