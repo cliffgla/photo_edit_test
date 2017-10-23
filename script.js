@@ -6,6 +6,7 @@ var satVal;
 
 
 $("input[value]").change(function() {
+    //brightness control
     brightVal = $("#brightness-input").val();
     pVal = parseInt(brightVal);
     console.log(brightVal);
@@ -15,6 +16,7 @@ $("input[value]").change(function() {
     $("#brightness-value").html("<p>"+ pVal + "</p>");
     $("#photo img").css("filter", "brightness("+ brightVal +") contrast("+ contrastVal +") saturate(" + satVal + ")");
 
+    //contrast control
     contrastVal = $("#contrast-input").val();
     pVal = parseInt(contrastVal);
     console.log(contrastVal);
@@ -24,6 +26,7 @@ $("input[value]").change(function() {
     $("#contrast-value").html("<p>"+ pVal + "</p>");
     $("#photo img").css("filter", "brightness("+ brightVal +") contrast("+ contrastVal +") saturate(" + satVal + ")");
 
+    //saturation control
     satVal = $("#saturation-input").val();
     pVal = parseInt(satVal);
     console.log(contrastVal);
